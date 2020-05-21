@@ -11,11 +11,12 @@
 <body>
   <main>
     <h1>Vanilla JavaScript App</h1>
+    <p>現在時刻は<b id="datetime">...</b></p>
   </main>
   <script>
     (async function() {
-      let { text } = await( await fetch(`/api/getmessage`)).json();
-      document.querySelector('#name').textContent = text;
+      let { text } = await( await fetch(`/api/GetDateTime`)).json();
+      document.querySelector('#datetime').textContent = text;
     }())
   </script>
 </body>
